@@ -115,7 +115,7 @@ static int kTopEdgeWidth   = 1;
     {
         UIColor *topEdgeColor = _topEdgeColor;
         if (!topEdgeColor) {
-            _edgeColor ? _edgeColor : [UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f];
+            _edgeColor ? _edgeColor : [UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.0f];
         }
         CGContextSetFillColorWithColor(ctx, topEdgeColor.CGColor);
         CGContextFillRect(ctx, CGRectMake(0, 0, rect.size.width, kTopEdgeWidth));
