@@ -87,7 +87,7 @@ static int kTopEdgeWidth   = 1;
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	    
     // fill ingthe background with a noise pattern
-    [[UIColor colorWithPatternImage:[UIImage imageNamed:_backgroundImageName ? _backgroundImageName : @"AKTabBarController.bundle/noise-pattern"]] set];
+//    [[UIColor colorWithPatternImage:[UIImage imageNamed:_backgroundImageName ? _backgroundImageName : @"AKTabBarController.bundle/noise-pattern"]] set];
     
     CGContextFillRect(ctx, rect);
     
@@ -133,9 +133,9 @@ static int kTopEdgeWidth   = 1;
     CGContextRestoreGState(ctx);
         
     // Drawing the edge border lines
-    CGContextSetFillColorWithColor(ctx, _edgeColor ? [_edgeColor CGColor] : [[UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f] CGColor]);
-    for (AKTab *tab in _tabs)
-        CGContextFillRect(ctx, CGRectMake(tab.frame.origin.x - kInterTabMargin, kTopEdgeWidth, kInterTabMargin, rect.size.height));
+//    CGContextSetFillColorWithColor(ctx, _edgeColor ? [_edgeColor CGColor] : [[UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f] CGColor]);
+//    for (AKTab *tab in _tabs)
+//        CGContextFillRect(ctx, CGRectMake(tab.frame.origin.x - kInterTabMargin, kTopEdgeWidth, kInterTabMargin, rect.size.height));
     
 }
 

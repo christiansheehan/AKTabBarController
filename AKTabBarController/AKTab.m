@@ -228,7 +228,7 @@ static const float kTopMargin = 2.0;
         // We fill the background with a noise pattern
         CGContextSaveGState(ctx);
         {
-            [[UIColor colorWithPatternImage:[UIImage imageNamed:_selectedBackgroundImageName ? _selectedBackgroundImageName : @"AKTabBarController.bundle/noise-pattern"]] set];
+//            [[UIColor colorWithPatternImage:[UIImage imageNamed:_selectedBackgroundImageName ? _selectedBackgroundImageName : @"AKTabBarController.bundle/noise-pattern"]] set];
             CGContextFillRect(ctx, rect);
             
             // We set the parameters of th gradient multiply blend
@@ -243,13 +243,13 @@ static const float kTopMargin = 2.0;
             CGContextDrawLinearGradient(ctx, gradient, CGPointMake(0, kTopMargin), CGPointMake(0, rect.size.height - kTopMargin), kCGGradientDrawsAfterEndLocation);
             
             // top dark emboss
-            CGContextSetBlendMode(ctx, kCGBlendModeNormal);
-            UIColor *topEdgeColor = _topEdgeColor;
-            if (!topEdgeColor) {
-                _edgeColor ? _edgeColor : [UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f];
-            }
-            CGContextSetFillColorWithColor(ctx, topEdgeColor.CGColor);
-            CGContextFillRect(ctx, CGRectMake(0, 0, rect.size.width, 1));
+//            CGContextSetBlendMode(ctx, kCGBlendModeNormal);
+//            UIColor *topEdgeColor = _topEdgeColor;
+//            if (!topEdgeColor) {
+//                _edgeColor ? _edgeColor : [UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f];
+//            }
+//            CGContextSetFillColorWithColor(ctx, topEdgeColor.CGColor);
+//            CGContextFillRect(ctx, CGRectMake(0, 0, rect.size.width, 1));
             
             CGColorSpaceRelease(colorSpace);
             CGGradientRelease(gradient);
@@ -257,13 +257,13 @@ static const float kTopMargin = 2.0;
         CGContextRestoreGState(ctx);
         
         // We draw the vertical lines for the border
-        CGContextSaveGState(ctx);
-        {
-            CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
-            CGContextSetFillColorWithColor(ctx, _strokeColor ? [_strokeColor CGColor] : [[UIColor colorWithRed:.7f green:.7f blue:.7f alpha:.4f] CGColor]);
-            CGContextFillRect(ctx, CGRectMake(0, 2, 1, rect.size.height - 2));
-            CGContextFillRect(ctx, CGRectMake(rect.size.width - 1, 2, 1, rect.size.height - 2));
-        }
+//        CGContextSaveGState(ctx);
+//        {
+//            CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
+//            CGContextSetFillColorWithColor(ctx, _strokeColor ? [_strokeColor CGColor] : [[UIColor colorWithRed:.7f green:.7f blue:.7f alpha:.4f] CGColor]);
+//            CGContextFillRect(ctx, CGRectMake(0, 2, 1, rect.size.height - 2));
+//            CGContextFillRect(ctx, CGRectMake(rect.size.width - 1, 2, 1, rect.size.height - 2));
+//        }
         CGContextRestoreGState(ctx);
         
         if (isTabIconPresent)
